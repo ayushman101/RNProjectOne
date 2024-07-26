@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
+// import { Button, FlatList, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { AppContextProvider } from './context';
+import { Home } from './components/Home';
 
 export default function App() {
+  // const [text, setText]=useState('')
+  // const [goalsList, setGoalsList]=useState([])
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <AppContextProvider>
+      <Home/>
+    </AppContextProvider>
+    );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
